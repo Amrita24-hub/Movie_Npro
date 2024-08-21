@@ -1,0 +1,55 @@
+<section class="user">
+  <div class="user_options-container">
+    <div class="user_options-text">
+      <div class="user_options-unregistered">
+        <h2 class="user_unregistered-title">Don't have an account?</h2>
+        <p class="user_unregistered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+        <a [routerLink]="['/signUp']"> <button class="user_unregistered-signup" id="signup-button">Create New User</button> </a>
+      </div>
+
+      <div class="user_options-registered">
+        <h2 class="user_registered-title">Have an account?</h2>
+        <p class="user_registered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+        <button class="user_registered-login" id="login-button">Login</button>
+      </div>
+    </div>
+    
+    <div class="user_options-forms" id="user_options-forms">
+      <div class="user_forms-login">
+        <!---- Toaster Message -->
+
+        <div *ngIf="errorMessage" class="error">
+          {{ errorMessage }}
+        </div>
+
+       <!---- Toaster Message -->
+        <h2 class="forms_title">Login</h2>
+     
+     
+
+    <!-------    Login Form   --------->
+
+        <form class="forms_form" name="form" #f="ngForm" (ngSubmit)="loginUser(userData)">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="email" [(ngModel)]="userData.email" name="email"  #email="ngModel" placeholder="Email" class="forms_field-input" required autofocus />
+            </div>
+            <div class="forms_field">
+              <input type="password" [(ngModel)]="userData.password" name="password"  #password="ngModel" placeholder="Password" class="forms_field-input" required />
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+            <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+            <input type="submit" value="Log In" class="forms_buttons-action">
+          </div>
+        </form>
+
+    <!-------    Login Form   --------->
+ 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!----------Designed By Pradeep Singh Tomar------------>

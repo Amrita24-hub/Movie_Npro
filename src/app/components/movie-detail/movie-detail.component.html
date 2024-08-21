@@ -1,0 +1,86 @@
+<app-header></app-header>
+<main>
+    <!-- movie-details-area -->
+    <section class="movie-details-area"  data-background="./assets/img/banner/banner_bg01.jpg" style="background-image: url('./assets/img/banner/banner_bg01.jpg');">
+        <div class="container" id="htmltopdf">
+            <div class="row align-items-center position-relative">              
+                <div class="col-xl-3 col-lg-4">
+                    <div class="movie-details-img">
+
+                        <!--------
+                        <img src="./assets/img/movie_details_img.jpg" alt="">
+                        --->
+                        <img src={{this.movieDetailData.poster}} alt="" width="303px;" height="430px;">
+                        <a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="popup-video"><img src="./Movflx - Online Movies &amp; TV Shows Template_files/play_icon.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-8">
+                    <div class="movie-details-content">
+                        <h2><span>{{this.movieDetailData.title}}</span></h2>
+                        <div class="banner-meta">
+                            <ul>
+                                <li class="quality">
+                                    <span>Pg 18</span>
+                                    <span>hd</span>
+                                </li>
+                                <li class="category">
+                                    <a href="./movflx/movie-details.html#">Romance,</a>
+                                    <a href="./movflx/movie-details.html#">Drama</a>
+                                </li>
+                                <li class="release-time">
+                                    <span><i class="far fa-calendar-alt"></i> 2021</span>
+                                    <span><i class="far fa-clock"></i> 128 min</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>{{this.movieDetailData.summary}}</p>
+                        <div class="movie-details-prime">
+                            <ul>
+                                <li class="share"><a href="./movflx/movie-details.html#"><i class="fa fa-share-alt"></i> Share</a></li>
+                                <li class="streaming">
+                                    <h6>Prime Video</h6>
+                                    <span>Streaming Channels</span>
+                                </li>
+                                <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fa fa-play"></i> Watch Now</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-details-btn">
+                    <a class="download-btn" download="" (click)="generatePdfFromHtml('htmltopdf')">Download </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- movie-details-area-end -->
+
+
+    <!-- tv-series-area-end -->
+
+    <!-- newsletter-area -->
+    <section class="newsletter-area newsletter-bg" data-background="img/bg/newsletter_bg.jpg" style="background-image: url(&quot;img/bg/newsletter_bg.jpg&quot;);">
+        <div class="container">
+            <div class="newsletter-inner-wrap">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="newsletter-content">
+                            <h4>Trial Start First 30 Days.</h4>
+                            <p>Enter your email to create or restart your membership.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="./movflx/movie-details.html#" class="newsletter-form">
+                            <input type="email" required="" placeholder="Enter your email">
+                            <button class="btn">get started</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- newsletter-area-end -->
+
+</main>
+
+<app-footer></app-footer>
