@@ -18,7 +18,8 @@
       <div class="user_forms-login">
         <!---- Toaster Message -->
 
-        <div *ngIf="errorMessage" class="error">
+        <div *ngIf="errorMessage" class="errormsg" style="color:#e14641;
+      margin-left:173px;">
           {{ errorMessage }}
         </div>
 
@@ -32,10 +33,10 @@
         <form class="forms_form" name="form" #f="ngForm" (ngSubmit)="loginUser(userData)">
           <fieldset class="forms_fieldset">
             <div class="forms_field">
-              <input type="email" [(ngModel)]="userData.email" name="email"  #email="ngModel" placeholder="Email" class="forms_field-input" required autofocus />
+              <input type="email" [(ngModel)]="userData.email" name="email"  #email="ngModel" placeholder="Email" class="forms_field-input" maxlength="30" required autofocus />
             </div>
             <div class="forms_field">
-              <input type="password" [(ngModel)]="userData.password" name="password"  #password="ngModel" placeholder="Password" class="forms_field-input" required />
+              <input type="password" [(ngModel)]="userData.password" name="password"  #password="ngModel" placeholder="Password"  maxlength="30" class="forms_field-input" required />
             </div>
           </fieldset>
           <div class="forms_buttons">

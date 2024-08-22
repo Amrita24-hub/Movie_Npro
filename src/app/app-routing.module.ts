@@ -12,6 +12,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { VerifyOtpComponent } from './components/verify-otp/verify-otp.component';
 import { SubscriptionOtpComponent } from './components/subscription-otp/subscription-otp.component';
 import { SubscriptionVerificationComponent } from './components/subscription-verification/subscription-verification.component';
+import { SubscriptionPaymentComponent } from './components/subscription-payment/subscription-payment.component';
 
 
 
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path:"verify-email", component:VerifyEmailComponent},
   {path:"verify-otp", component:VerifyOtpComponent},
   {path:"subscription-otp", component:SubscriptionOtpComponent},
-  {path:"subscription-verification", component:SubscriptionVerificationComponent}
+  {path:"subscription-verification", component:SubscriptionVerificationComponent},
+  {path:"subscription-payment", component:SubscriptionPaymentComponent},
 
   ];
   

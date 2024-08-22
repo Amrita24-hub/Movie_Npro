@@ -2,7 +2,7 @@
  <!-- main-area -->
  <main>
 <!-- breadcrumb-area -->
-<section class="breadcrumb-area breadcrumb-bg" data-background="./assets/img/banner/banner_bg01.jpg" style="background-image: url('./assets/img/banner/banner_bg01.jpg');">
+    <section class="breadcrumb-area breadcrumb-bg" data-background="./assets/img/banner/banner_bg01.jpg" style="background-image: url('./assets/img/banner/banner_bg01.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -18,15 +18,26 @@
                 </div>
             </div>
         </div>
-</section>
+    </section>
 <!-- breadcrumb-area-end -->
-
  <!-- Subscription-area -->
-
  <section class="form-section" data-background="./assets/img/banner/banner_bg01.jpg" style="background-image: url('./assets/img/banner/banner_bg01.jpg');">
-  <img src="./assets/images/payment_sucessful.jpg">
+    <div class="form-container">
+        <h2 style="color:#212529">Subscribe</h2>
+        <form class="simple-form">
+            <div class="form-group">
+                <label for="name">Phone Number</label>
+                <input type="number" maxlength=10  name="phonenumber"  required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email"  maxlength="10"  required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </section>
-
 <!-- Subscription-area-end -->
 </main>
 <app-footer></app-footer>
+

@@ -13,16 +13,14 @@ import { ToastrService } from 'ngx-toastr';
 export class SubscriptionVerificationComponent {
   constructor(private formbuilder: FormBuilder,private dataService: DataService,private router: Router,private toastr: ToastrService) {
   }
-  userData:any={
+  verificationData:any={
     email:'',
     number:'',
    }; 
    
-   subscriptionVerification(userData:any){
+   subscriptionVerification(verificationData:any){
 
 
    }
-
-
 
 }

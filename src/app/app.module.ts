@@ -22,6 +22,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SubscriptionOtpComponent } from './components/subscription-otp/subscription-otp.component';
 import { SubscriptionVerificationComponent } from './components/subscription-verification/subscription-verification.component';
+import { SubscriptionPaymentComponent } from './components/subscription-payment/subscription-payment.component';
 
 
 
@@ -59,7 +60,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     VerifyEmailComponent,
     VerifyOtpComponent,
     SubscriptionOtpComponent,
-    SubscriptionVerificationComponent
+    SubscriptionVerificationComponent,
+    SubscriptionPaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +98,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     BrowserAnimationsModule, // Required for Toastr animations
     ToastrModule.forRoot({ // ToastrModule configuration
       timeOut: 3000, // Duration of the toast
-      positionClass: 'toast-bottom-right', // Position of the toast
+      positionClass: 'toast-top-right', // Position of the toast
       preventDuplicates: true, // Prevent duplicate toasts
       closeButton: true // Show close button
     })

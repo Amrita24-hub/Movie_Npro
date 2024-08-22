@@ -17,6 +17,7 @@ export class HeaderComponent {
     signIn:boolean=true;
     signOut:boolean=false;
     pricing:boolean=false;
+    showUsername:boolean=false;
 
   constructor(private dataService: DataService,private router: Router, private commonService: CommonService,private translate: TranslateService){
     //this.translate.setDefaultLang('en');
@@ -30,6 +31,7 @@ export class HeaderComponent {
      this.signIn=false;
      this.signOut=true;
      this.pricing=true;
+     this.showUsername=true;
     }
     
     //console.log("Token",token);

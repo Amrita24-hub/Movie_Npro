@@ -55,9 +55,7 @@
                                   <li>
                                    <a [routerLink]="['/contancts']"> {{ 'contacts' | translate }}</a>
                                 </li>
-                                <li class="menu-item-has-children"><a> Welcome  User</a>
-                                 
-    
+                                <li class="menu-item-has-children" *ngIf="showUsername"><a> Welcome User</a>
                               </ul>
                           </div>
                           <div class="header-action d-none d-md-block">

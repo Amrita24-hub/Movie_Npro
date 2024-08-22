@@ -40,6 +40,7 @@ export class VerifyEmailComponent {
    this.dataService.verifyEmail(userData).subscribe(
     (response) => {
       this.data = response;
+      this.router.navigate(["verify-otp"]);
     },
     (error) => {
       this.errorMessage = error;
@@ -47,13 +48,7 @@ export class VerifyEmailComponent {
       this.toastr.error(this.errorMessage, 'Error');
     }
   );
-  this.router.navigate(["verify-otp"]);
-  
-    /*
-    this.dataService.verifyEmailId(this.userEmailData).subscribe(response =>{ 
-      this.router.navigate(["verify-email"]);
-    });   
-    */
+    
 
 }
 

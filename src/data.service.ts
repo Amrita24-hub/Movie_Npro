@@ -56,7 +56,6 @@ export class DataService {
     getMovieDetailsById(detailId:number){
       return this.http.get(`${this.baseUrl}/api/Movie/${detailId}`);
 
-     
     }
 
     /////////Movie Details By Id ///////

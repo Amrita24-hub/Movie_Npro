@@ -48,6 +48,7 @@ export class SignUpComponent {
    this.dataService.register(userData).subscribe(
     (response) => {
       this.data = response;
+      this.router.navigate(["verify-email"]);
     },
     (error) => {
       this.errorMessage = error;
@@ -55,12 +56,8 @@ export class SignUpComponent {
       this.toastr.error(this.errorMessage, 'Error');
     }
   );
-  this.router.navigate(["verify-email"]);
-    /*
-    this.dataService.verifyEmailId(this.userEmailData).subscribe(response =>{ 
-      this.router.navigate(["verify-email"]);
-    });   
-    */
+  
+   
  }
 
 }
