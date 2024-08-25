@@ -22,11 +22,10 @@ export class LognComponent {
    userEmailData:any={
     email:'',
    }
-  
    loginDetails:any={
     token:'',
+    message:'',
    }
-
    isRegistered:boolean=false;
 
   /********  User Registration  ******/
@@ -34,12 +33,12 @@ export class LognComponent {
   loginUser(userData: any) {
     this.dataService.login(userData).subscribe(
       (response) => {
-
          this.data = response;
          const jsonString = JSON.stringify(response);
          const jsonObject = JSON.parse(jsonString);
          this.loginDetails.token=jsonObject.token;
          localStorage.setItem('token', this.loginDetails.token);
+         this.toastr.success(this.loginDetails.message, 'Success');
          this.router.navigate(["home"]);
       },
       (error) => {

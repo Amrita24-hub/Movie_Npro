@@ -25,7 +25,7 @@ export class SignUpComponent {
    userEmailData:any={
     email:'',
    }
-
+   
    isRegistered:boolean=false;
 
   /********  User Registration  ******/
@@ -37,17 +37,10 @@ export class SignUpComponent {
     this.userData.confirmpassword = this.userData.confirmpassword;
     this.userData.phonenumber = this.userData.phonenumber; 
     
-    /*
-    this.dataService.register(userData).subscribe(response =>{ 
-    console.log(response);
-    this.router.navigate(["verify-email"]);
-   
-   });
-   */
-
    this.dataService.register(userData).subscribe(
     (response) => {
       this.data = response;
+      this.toastr.success("Username Created Sucessfully", 'Success');
       this.router.navigate(["verify-email"]);
     },
     (error) => {
@@ -56,8 +49,7 @@ export class SignUpComponent {
       this.toastr.error(this.errorMessage, 'Error');
     }
   );
-  
-   
+    
  }
 
 }

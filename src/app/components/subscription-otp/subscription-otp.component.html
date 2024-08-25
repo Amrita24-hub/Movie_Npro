@@ -26,14 +26,14 @@
       <i class="bx bxs-check-shield"></i>
     </header>
     <h4>Enter OTP Code</h4>
-    <form action="#">
+    <form (ngSubmit)="verifyOtp()" #otpForm="ngForm">
       <div class="input-field">
-        <input type="number" minlength="1"/>
-        <input type="number" minlength="1"/>
-        <input type="number" minlength="1"/>
-        <input type="number" minlength="1"/>
+        <input type="number" [(ngModel)]="otpPart1" name="otpPart1" maxlength="1" required/>
+        <input type="number" [(ngModel)]="otpPart2" name="otpPart2" maxlength="1" required/>
+        <input type="number" [(ngModel)]="otpPart3" name="otpPart3" maxlength="1" required/>
+        <input type="number" [(ngModel)]="otpPart4" name="otpPart4" maxlength="1" required/>
       </div>
-      <button>Verify OTP</button>
+      <button type="submit">Verify OTP</button>
     </form>
 </div>
 </section>

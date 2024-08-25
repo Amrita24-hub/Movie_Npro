@@ -1,0 +1,53 @@
+$form-background-color: #f9f9f9;
+$form-border-color: #ccc;
+$form-padding: 20px;
+$form-width: 300px;
+$input-padding: 10px;
+$input-border-color: #ddd;
+$button-background-color: #007bff;
+$button-color: #fff;
+$button-border-color: #007bff;
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #04081a;
+  
+  form {
+    background-color: $form-background-color;
+    border: 1px solid $form-border-color;
+    padding: $form-padding;
+    width: $form-width;
+    border-radius: 8px;
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    
+    input {
+      width: 100%;
+      padding: $input-padding;
+      margin-bottom: 16px;
+      border: 1px solid $input-border-color;
+      border-radius: 4px;
+    }
+    
+    button {
+      width: 100%;
+      padding: $input-padding;
+      border: 1px solid $button-border-color;
+      background-color: $button-background-color;
+      color: $button-color;
+      border-radius: 4px;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: darken($button-background-color, 10%);
+      }
+    }
+  }
+}

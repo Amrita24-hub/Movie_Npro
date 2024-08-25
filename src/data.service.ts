@@ -70,7 +70,6 @@ export class DataService {
 
 //////// Get genre Data Id wise ///////
 
-
 getGenreDataById(detailId:number){
   return this.http.get(`${this.baseUrl}/api/genres/${detailId}`);
 }
@@ -190,7 +189,20 @@ resendOtp(user: any) {
 ///// Subscription Api ///////
 
 paidSubscription(user: any) {
-  return this.http.post(`${this.baseUrl}/api/UserAccount/resend-email-otp`, user, { responseType: 'text' }).pipe(
+  return this.http.post(`${this.baseUrl}/api/Subscribe/create`, user, { responseType: 'json' }).pipe(
+    catchError(error => {
+      console.error('Error:', error);
+      return throwError(() => new Error('An error occurred'));
+    })
+  );
+}
+
+///// Subscription Api ///////
+
+/////// Verify Otp //////
+
+verifyOtp(user: any) {
+  return this.http.post(`${this.baseUrl}/api/Subscribe/verify`, user, { responseType: 'json' }).pipe(
     catchError(error => {
       console.error('Error:', error);
       return throwError(() => new Error('An error occurred'));
@@ -199,6 +211,6 @@ paidSubscription(user: any) {
 }
 
 
-///// Subscription Api ///////
+/////// Verify Otp //////
 
 }
