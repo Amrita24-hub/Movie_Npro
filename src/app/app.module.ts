@@ -23,6 +23,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SubscriptionOtpComponent } from './components/subscription-otp/subscription-otp.component';
 import { SubscriptionVerificationComponent } from './components/subscription-verification/subscription-verification.component';
 import { SubscriptionPaymentComponent } from './components/subscription-payment/subscription-payment.component';
+import { HighlighterDirective } from './highlighter.directive';
 
 
 
@@ -61,7 +62,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     VerifyOtpComponent,
     SubscriptionOtpComponent,
     SubscriptionVerificationComponent,
-    SubscriptionPaymentComponent
+    SubscriptionPaymentComponent,
+    HighlighterDirective
   ],
   imports: [
     BrowserModule,

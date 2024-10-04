@@ -19,23 +19,37 @@
         <h2 class="forms_title">Login</h2>
     <!-------    Login Form   --------->
 
-        <form class="forms_form" name="form" #f="ngForm" (ngSubmit)="loginUser(userData)">
+        <form class="forms_form" name="form" #f="ngForm" (ngSubmit)="loginUser(userData)" novalidate>
           <fieldset class="forms_fieldset">
             <div class="forms_field">
               <input type="email" [(ngModel)]="userData.email" name="email"  #email="ngModel" placeholder="Email" class="forms_field-input" maxlength="30" required autofocus />
             </div>
+           
+            <!---- For validation of form -->
+
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" style="color: red;font-size:0.875em;">
+               <div *ngIf="email.errors?.['required']"> Email is required.</div>
+               <div *ngIf="email.errors?.['email']">Invalid Email Format.</div>
+            </div>
+
+             <!---- For validation of form -->
             <div class="forms_field">
               <input type="password" [(ngModel)]="userData.password" name="password"  #password="ngModel" placeholder="Password"  maxlength="30" class="forms_field-input" required />
             </div>
+
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" style="color: red;font-size:0.875em;">
+              <div *ngIf="password.errors?.['required']"> Password is required.</div>
+           </div>
+
+
           </fieldset>
           <div class="forms_buttons">
             <button type="button" class="forms_buttons-forgot">Forgot password?</button>
-            <input type="submit" value="Log In" class="forms_buttons-action">
+            <input type="submit" value="Log In" class="forms_buttons-action" [disabled]="f.invalid">
           </div>
         </form>
 
     <!-------    Login Form   --------->
- 
       </div>
     </div>
   </div>
